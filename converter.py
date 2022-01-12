@@ -19,9 +19,17 @@ hand_dict = {
 yaku_dict = {
     "White Dragon": "役牌 白",
     "Green Dragon": "役牌 發",
-    "Red Dragon": "役牌 發",
-    "Ura Dora": "",
-    "Riichi": ""
+    "Red Dragon": "役牌 中",
+    "Dora": "ドラ",
+    "Ura Dora": "裏ドラ",
+    "Red Five": "赤ドラ",
+    "Riichi": "立直",
+    "Fully Concealed Hand": "門前清自摸和",
+    "Mixed Triple Sequence": "三色同順",
+    "Pure Double Sequence": "一盃口",
+    "Pinfu": "平和",
+    "All Simples": "断幺九",
+    "Seven Pairs": "七対子"
 }
 
 ending_dict = {
@@ -62,10 +70,20 @@ def get_th_log(qh_log):
         qh_log[-1][0] = ending_dict[qh_log[-1][0]]
         return ([qh_log])
 
-    print (qh_log[-1][2][3].split(' ')[0])
     if qh_log[-1][2][3].split(' ')[0] in hand_dict.keys():
         qh_log[-1][2][3] = hand_dict[qh_log[-1][2][3].split(' ')[0]]+qh_log[-1][2][3].split(' ')[1]
 
+    new_yakus = []
+    new_yakus.append(qh_log[-1][2][0])
+    new_yakus.append(qh_log[-1][2][1])
+    new_yakus.append(qh_log[-1][2][2])
+    new_yakus.append(qh_log[-1][2][3])
+    for i in range(4,len(qh_log[-1][2])):
+        if qh_log[-1][2][i].split('(')[0] in yaku_dict.keys():  
+            new_yakus.append(yaku_dict[qh_log[-1][2][i].split('(')[0]]+'('+qh_log[-1][2][i].split('(')[1])
+        else:
+            new_yakus.append(qh_log[-1][2][i])
+    qh_log[-1][2] = new_yakus
     return ([qh_log])
 
 with open(qh_paipu_name, 'r') as f:
