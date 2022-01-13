@@ -3,7 +3,8 @@
 import json
 import sys
 
-qh_paipu_name = "1_11_2022_Jade_Room_South.json"
+#qh_paipu_name = "1_11_2022_Jade_Room_South.json"
+qh_paipu_name = "1_13_2022_Jade_Room_South.json"
 th_paipu_name = "output.json"
 
 hand_dict = {
@@ -20,20 +21,29 @@ yaku_dict = {
     "White Dragon": "役牌 白",
     "Green Dragon": "役牌 發",
     "Red Dragon": "役牌 中",
+    "Seat Wind": "自風 南",  #These two are wrong but they don't matter
+    "Prevalent Wind": "場風 南",
     "Dora": "ドラ",
     "Ura Dora": "裏ドラ",
     "Red Five": "赤ドラ",
     "Riichi": "立直",
+    "Ippatsu": "一発",
     "Fully Concealed Hand": "門前清自摸和",
     "Mixed Triple Sequence": "三色同順",
     "Pure Double Sequence": "一盃口",
     "Pinfu": "平和",
     "All Simples": "断幺九",
-    "Seven Pairs": "七対子"
+    "Pure Straight": "一気通貫",
+    "Seven Pairs": "七対子",
+    "Fully Outside Hand": "純全帯幺九",
+    "After a Kan":"嶺上開花",
+    "Half Flush": "混一色",
+    "Full Flush": "清一色"
 }
 
 ending_dict = {
-    "Ryuukyoku":"流局"
+    "Ryuukyoku":"流局",
+    "Kyuushu Kyuuhai":"九種九牌"
 }
 def get_th_title(qh_title):
     room_name = qh_title[0].split(' ')[0]
