@@ -4,7 +4,7 @@ import json
 import sys
 
 #qh_paipu_name = "1_11_2022_Jade_Room_South.json"
-qh_paipu_name = "1_13_2022_Jade_Room_South.json"
+qh_paipu_name = "2_13_2022_Jade_Room_South4.json"
 th_paipu_name = "output.json"
 
 hand_dict = {
@@ -27,18 +27,27 @@ yaku_dict = {
     "Ura Dora": "裏ドラ",
     "Red Five": "赤ドラ",
     "Riichi": "立直",
+    "Double Riichi": "両立直",
     "Ippatsu": "一発",
     "Fully Concealed Hand": "門前清自摸和",
     "Mixed Triple Sequence": "三色同順",
+    "Triple Triplets": "三色同刻",
     "Pure Double Sequence": "一盃口",
+    "Twice Pure Double Sequence": "二盃口",
     "Pinfu": "平和",
     "All Simples": "断幺九",
     "Pure Straight": "一気通貫",
     "Seven Pairs": "七対子",
+    "All Triplets":"対々和",
+    "Half Outside Hand": "混全帯幺九",
     "Fully Outside Hand": "純全帯幺九",
     "After a Kan":"嶺上開花",
+    "Under the Sea":"海底摸月",
+    "Under the River":"河底撈魚",
     "Half Flush": "混一色",
-    "Full Flush": "清一色"
+    "Full Flush": "清一色",
+    "Three Concealed Triplets": "三暗刻",
+    "Thirteen Orphans": "国士無双"
 }
 
 ending_dict = {
